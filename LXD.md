@@ -27,22 +27,27 @@ Para tornarmos os containers LXD disponíveis em nossa rede local temos agumas o
      +---------+---------------------+---------+
      ```
 
-    1.2. Agora, criamos o *profile*:
+ 1.2. Agora, criamos o *profile*:
         ```bash
         lxc profile create <profile_name>
-        ```
-        
-   1.3. Verificamos as configurações do *profile* criado:
+    ```
 
-  ```bash
-    lxc profile show <profile_name>
-  ```
 
-     1.4. Agora adicionamos e vinculamos a interface de rede do *profile* à uma interface física do host hospedeiro:
+ 1.3. Verificamos as configurações do *profile* criado:
+
+```bash
+lxc profile show <profile_name>
+```
+
+    
+
+1.4. Agora adicionamos e vinculamos a interface de rede do *profile* à uma interface física do host hospedeiro:
 
 ```bash
 lxc profile device add <profile_name> eth0 nic nictype=macvlan parent=<nic_hospedeiro>
 ```
+
+
 
 1.5. Verificamos, novamente, as configurações do *profile* criado:
 
@@ -75,5 +80,3 @@ used_by:
 Referências:
 
 [How to make your LXD containers get IP addresses from your LAN using macvlan](https://blog.simos.info/how-to-make-your-lxd-container-get-ip-addresses-from-your-lan/)
-
-
