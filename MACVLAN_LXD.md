@@ -32,11 +32,11 @@ Para tornarmos os containers LXD disponíveis em nossa rede local temos agumas o
         lxc profile create <profile_name>
         ```
         
-    1.3. Verificamos as configurações do *profile* criado:
+   1.3. Verificamos as configurações do *profile* criado:
 
-```bash
-lxc profile show <profile_name>
-```
+  ```bash
+    lxc profile show <profile_name>
+  ```
 
      1.4. Agora adicionamos e vinculamos a interface de rede do *profile* à uma interface física do host hospedeiro:
 
