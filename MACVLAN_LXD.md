@@ -31,6 +31,7 @@ Para tornarmos os containers LXD disponíveis em nossa rede local temos agumas o
         ```bash
         lxc profile create <profile_name>
         ```
+        
     1.3. Verificamos as configurações do *profile* criado:
 
 ```bash
